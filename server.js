@@ -5,7 +5,7 @@ const server = express();
 server.use(express.json());
 
 
-
+//tests passed
 server.get('/', (req, res) => {
   db('accounts')
     .then(results => {
@@ -16,6 +16,7 @@ server.get('/', (req, res) => {
     });
 });
 
+//tests passed
 server.post('/', (req, res) => {
   const account = req.body;
   db('accounts')
@@ -28,6 +29,7 @@ server.post('/', (req, res) => {
     });
 });
 
+//tests passed
 server.delete('/:id', (req, res) => {
   const accountId = req.params.id;
   db('accounts')
@@ -43,6 +45,8 @@ server.delete('/:id', (req, res) => {
     });
 });
 
+
+//tests passed!!
 server.put('/:id', (req, res) => {
   const accountId = req.params.id;
   const changes = req.body;
